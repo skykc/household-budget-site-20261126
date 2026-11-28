@@ -1,28 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DompetKeluarga — Anggaran Rumah Tangga</title>
-<link rel="stylesheet" href="style.css">
-<script type="module" src="main.js"></script>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="#/">DompetKeluarga</a>
-  <nav class="site-nav" aria-label="Navigasi utama">
-    <a href="#/">Beranda</a>
-    <a href="#/kalkulator">Kalkulator</a>
-    <a href="#/pengeluaran">Pengeluaran</a>
-    <a href="#/tujuan">Tabungan</a>
-    <a href="#/harga">Harga Pokok</a>
-    <a href="#/panduan">Panduan</a>
-  </nav>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">Rp</div>
+      <div>
+        <div class="brand-name">DompetKeluarga</div>
+        <div class="brand-tag">Anggaran Rumah Tangga</div>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="#/" data-route="/">Beranda</a>
+      <a href="#/kalkulator" data-route="/kalkulator">Kalkulator 50/30/20</a>
+      <a href="#/pengeluaran" data-route="/pengeluaran">Pengeluaran</a>
+      <a href="#/tujuan" data-route="/tujuan">Tabungan</a>
+      <a href="#/harga" data-route="/harga">Harga Pokok</a>
+      <a href="#/panduan" data-route="/panduan">Panduan</a>
+      <a href="#/utang" data-route="/utang">Pelunasan Utang</a>
+      <a href="#/diagnosis" data-route="/diagnosis">Diagnosis</a>
+    </nav>
+  </div>
 </header>
-<main id="app"></main>
+<main id="app" class="wrap" aria-live="polite"></main>
 <footer class="site-footer">
-  <p>DompetKeluarga — alat bantu anggaran rumah tangga. Harga acuan: Badan Pusat Statistik, November 2026. UMP: Pemprov DKI Jakarta, 2026.</p>
-  <p>Data contoh tersimpan hanya di peramban Anda (localStorage). Tanpa akun, tanpa iklan.</p>
+  <div class="wrap">
+    <p><strong>DompetKeluarga — Anggaran Rumah Tangga.</strong> Semua perhitungan berjalan di browser Anda; data contoh tersimpan hanya di perangkat Anda (localStorage), tidak dikirim ke mana pun.</p>
+    <p>Sumber data: BPS (harga acuan nasional, November 2026) · Pemprov DKI Jakarta (UMP 2026).</p>
+  </div>
 </footer>
+<script src="./app.js"></script>
 </body>
 </html>
